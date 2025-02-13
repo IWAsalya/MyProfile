@@ -1,10 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #11b8de;
+    --black: #000;
+    --gray-1: #868789;
+    --gray-2: #3f3f41;
+    --gray-3: #25292a;
+    --white: white;
+    --white-smoke: #d5d5d5;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
+    color: var(--gray-3);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px var(--gray-1);
+}
+
+main>div {
+    padding: 40px 30px;
+}
+
+main .left-area {
+    background-color: var(--gray-3);
+}
+
+main .left-area img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+main .left-area h1 {
+    font-size: 26px;
+    margin: 30px 0;
     text-align: center;
-    background-color: #f4f4f4;
+    color: var(--white-smoke);
 }
-header {
-    background: #007bff;
-    color: white;
-    padding: 20px;
+
+main .left-area h1 small {
+    display: block;
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: normal;
 }
+
+/* Continue with the rest of your CSS... */
+
