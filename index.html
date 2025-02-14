@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Ibrahim W. Asalya</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-
 <body>
+
+    <!-- 🔹 شريط الصورة العلوي -->
+    <header class="header">
+        <img src="assets/images22.jpg" alt="Header Image">
+    </header>
+
     <main>
+        <!-- 🔹 المنطقة اليسرى -->
         <div class="left-area">
             <img src="assets/profile.jpg" alt="Profile Picture"/>
             <h1 class="mobile-only">IBRAHIM W.ASALYA
                 <small>Full Stack Developer</small>
             </h1>
+
+            <!-- 🔹 قسم الاتصال -->
             <section class="contact">
                 <h2>CONTACT</h2>
                 <p><i class="fa-solid fa-phone-volume"></i> +972597778030</p>
                 <p><i class="fa-regular fa-envelope"></i> iasalya537@gmail.com</p>
-                <p><i class="fa-solid fa-globe"></i> https://iwasalya.github.io/TechPulse-Gaza/</p>
+                <p><i class="fa-solid fa-globe"></i> 
+                    <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">
+                        TechPulse-Gaza
+                    </a>
+                </p>
             </section>
+
+            <!-- 🔹 قسم المتابعة على وسائل التواصل -->
             <section class="follow-me">
                 <h2>FOLLOW ME</h2>
-                <h3>Facebook</h3>
-                <p>facebook.com/Ibrahim W. Asalya</p>
-                <h3>Twitter</h3>
-                <p>twitter.com/</p>
-                <h3>Telegram</h3>
-                <p>t.me/IWA_2000</p>
+                <p><i class="fa-brands fa-facebook"></i> facebook.com/IbrahimWAsalya</p>
+                <p><i class="fa-brands fa-twitter"></i> twitter.com/</p>
+                <p><i class="fa-brands fa-telegram"></i> t.me/IWA_2000</p>
             </section>
+
+            <!-- 🔹 اللغات -->
             <section class="languages">
                 <h2>LANGUAGES</h2>
                 <p>Arabic</p>
@@ -43,54 +56,46 @@
                 <div><div style="width:60%;"></div></div>
             </section>
         </div>
+
+        <!-- 🔹 المنطقة اليمنى -->
         <div class="right-area">
             <div>
                 <h1 class="desktop-only">IBRAHIM W.ASALYA
                     <small>Full Stack Developer</small>
                 </h1>
+
+                <!-- 🔹 الخبرات -->
                 <section>
                     <h2>EXPERIENCE</h2>
                     <div class="grid">
-                        <div>
-                            <h3>Frontend Developer</h3>
-                            <p>2014-2015</p>
-                        </div>
+                        <div><h3>Frontend Developer</h3><p>2014-2015</p></div>
                         <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
+                        <div><p>Developed user interfaces...</p></div>
                         <div><h3>Fullstack Developer</h3><p>2014-2019</p></div>
                         <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
+                        <div><p>Worked on web applications...</p></div>
                         <div><h3>Game Developer</h3><p>2019-2023</p></div>
                         <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
+                        <div><p>Designed and built games...</p></div>
                     </div>
                 </section>
+
+                <!-- 🔹 التعليم -->
                 <section>
                     <h2>EDUCATION</h2>
                     <div class="grid">
                         <div><h3>Networks And Systems</h3><p>2012-2014</p></div>
                         <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
+                        <div><p>Studied network infrastructure...</p></div>
                         <div><h3>Computer Science</h3><p>2014-2017</p></div>
                         <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
-                    </div>
-                </section>
-                <section>
-                    <h2>REFERENCES</h2>
-                    <div class="grid">
-                        <div><h3>Omar El Koussa</h3><p>Manager</p></div>
-                        <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
-                        <div><h3>James Matta</h3><p>Manager</p></div>
-                        <div class="point"></div>
-                        <div><p>Lorem ipsum...</p></div>
+                        <div><p>Focused on software development...</p></div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
+
     <script src="script.js"></script>
 </body>
-
 </html>
