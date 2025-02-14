@@ -1,90 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-</head>
+/* إعدادات عامة */
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+}
 
-<body>
-    <!-- شاشة تحميل الصفحة -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
+/* صورة الغلاف */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('assets/images.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
 
-    <!-- صورة الغلاف -->
-    <div class="background-overlay"></div>
+/* تصميم الصفحة */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.8);
+}
 
-    <!-- القائمة الجانبية -->
-    <div class="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">×</button>
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+/* المنطقة اليسرى */
+.left-area {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    text-align: center;
+}
 
-    <!-- المحتوى الرئيسي -->
-    <main>
-        <div class="left-area">
-            <img src="assets/profile.jpg" alt="Profile Picture"/>
-            <h1>IBRAHIM W.ASALYA <small>Full Stack Developer</small></h1>
+.left-area img {
+    max-width: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
 
-            <!-- معلومات الاتصال -->
-            <section class="contact">
-                <h2>CONTACT</h2>
-                <p><i class="fa-solid fa-phone-volume"></i> 
-                    <a href="https://wa.me/972597778030" target="_blank">+972597778030</a></p>
-                <p><i class="fa-regular fa-envelope"></i> 
-                    <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
-                <p><i class="fa-solid fa-globe"></i> 
-                    <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">My Website</a></p>
-            </section>
+/* الأزرار وروابط الاتصال */
+.contact p i {
+    color: yellow;
+    margin-right: 10px;
+}
 
-            <!-- المهارات -->
-            <section class="skills">
-                <h2>Skills</h2>
-                <p>HTML & CSS</p>
-                <div class="progress-bar"><div style="width: 90%;"></div></div>
-                <p>JavaScript</p>
-                <div class="progress-bar"><div style="width: 80%;"></div></div>
-                <p>Python</p>
-                <div class="progress-bar"><div style="width: 75%;"></div></div>
-            </section>
-        </div>
+.contact a {
+    color: yellow;
+    text-decoration: none;
+}
 
-        <div class="right-area">
-            <section id="about">
-                <h2>ABOUT ME</h2>
-                <p>Lorem ipsum dolor sit amet...</p>
-            </section>
+.contact a:hover {
+    color: white;
+    background: yellow;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
 
-            <section id="experience">
-                <h2>EXPERIENCE</h2>
-                <p>Full Stack Developer - 2014-2019</p>
-            </section>
+/* المهارات واللغات */
+.progress-bar {
+    height: 8px;
+    background: gray;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 
-            <section id="projects">
-                <h2>PROJECTS</h2>
-                <p>Check out my latest projects...</p>
-            </section>
+.progress-bar div {
+    height: 100%;
+    background: yellow;
+    transition: width 1s ease-in-out;
+}
 
-            <section id="contact">
-                <h2>CONTACT</h2>
-                <p>Email: <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
-            </section>
-        </div>
-    </main>
+/* المنطقة اليمنى */
+.right-area {
+    padding: 40px 30px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.right-area section {
+    margin-bottom: 30px;
+}
+
+.right-area h2 {
+    border-bottom: 2px solid yellow;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* تعديل التنسيق على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .left-area img {
+        max-width: 120px;
+    }
+}
