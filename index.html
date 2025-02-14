@@ -3,76 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile - Ibrahim W. Asalya</title>
+    <title>My Profile</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-<body>
 
-    <!-- 🔹 صورة الغلاف الشفافة -->
+<body>
+    <!-- شاشة تحميل الصفحة -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- صورة الغلاف -->
     <div class="background-overlay"></div>
 
+    <!-- القائمة الجانبية -->
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- المحتوى الرئيسي -->
     <main>
-        <!-- 🔹 المنطقة اليسرى -->
         <div class="left-area">
             <img src="assets/profile.jpg" alt="Profile Picture"/>
-            <h1 class="mobile-only">IBRAHIM W.ASALYA
-                <small>Full Stack Developer</small>
-            </h1>
+            <h1>IBRAHIM W.ASALYA <small>Full Stack Developer</small></h1>
 
-            <!-- 🔹 قسم الاتصال -->
+            <!-- معلومات الاتصال -->
             <section class="contact">
                 <h2>CONTACT</h2>
-                <p><i class="fa-brands fa-whatsapp"></i>
-                    <a href="https://wa.me/972597778030" target="_blank">+972 59 777 8030</a>
-                </p>
-                <p><i class="fa-regular fa-envelope"></i>
-                    <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a>
-                </p>
+                <p><i class="fa-solid fa-phone-volume"></i> 
+                    <a href="https://wa.me/972597778030" target="_blank">+972597778030</a></p>
+                <p><i class="fa-regular fa-envelope"></i> 
+                    <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
                 <p><i class="fa-solid fa-globe"></i> 
-                    <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">
-                        TechPulse-Gaza
-                    </a>
-                </p>
+                    <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">My Website</a></p>
             </section>
 
-            <!-- 🔹 قسم المتابعة على وسائل التواصل -->
-            <section class="follow-me">
-                <h2>FOLLOW ME</h2>
-                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/IbrahimWAsalya" target="_blank">Facebook</a></p>
-                <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/" target="_blank">Twitter</a></p>
-                <p><i class="fa-brands fa-telegram"></i> 
-                    <a href="https://t.me/IWA_2000" target="_blank">Telegram</a>
-                </p>
+            <!-- المهارات -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <p>HTML & CSS</p>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+                <p>JavaScript</p>
+                <div class="progress-bar"><div style="width: 80%;"></div></div>
+                <p>Python</p>
+                <div class="progress-bar"><div style="width: 75%;"></div></div>
             </section>
         </div>
 
-        <!-- 🔹 المنطقة اليمنى -->
         <div class="right-area">
-            <div>
-                <h1 class="desktop-only">IBRAHIM W.ASALYA
-                    <small>Full Stack Developer</small>
-                </h1>
+            <section id="about">
+                <h2>ABOUT ME</h2>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </section>
 
-                <!-- 🔹 الخبرات -->
-                <section>
-                    <h2>EXPERIENCE</h2>
-                    <div class="grid">
-                        <div><h3>Frontend Developer</h3><p>2014-2015</p></div>
-                        <div class="point"></div>
-                        <div><p>Developed user interfaces...</p></div>
-                        <div><h3>Fullstack Developer</h3><p>2014-2019</p></div>
-                        <div class="point"></div>
-                        <div><p>Worked on web applications...</p></div>
-                        <div><h3>Game Developer</h3><p>2019-2023</p></div>
-                        <div class="point"></div>
-                        <div><p>Designed and built games...</p></div>
-                    </div>
-                </section>
-            </div>
+            <section id="experience">
+                <h2>EXPERIENCE</h2>
+                <p>Full Stack Developer - 2014-2019</p>
+            </section>
+
+            <section id="projects">
+                <h2>PROJECTS</h2>
+                <p>Check out my latest projects...</p>
+            </section>
+
+            <section id="contact">
+                <h2>CONTACT</h2>
+                <p>Email: <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
+            </section>
         </div>
     </main>
 
