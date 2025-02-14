@@ -13,14 +13,19 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
-/* 🔹 شريط الصورة العلوي */
-.header img {
+/* 🔹 صورة الغلاف الشفافة */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
+    height: 100vh;
+    background: url('assets/images.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
 }
 
 /* 🔹 الهيكل العام */
@@ -62,9 +67,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     padding: 20px;
-    background-image: url('assets/images.jpg');
-    background-size: cover;
-    background-position: center;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -74,10 +77,12 @@ h1 {
 a {
     color: var(--white);
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
     opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* 🔹 تحسين الشبكة */
@@ -93,8 +98,25 @@ p {
     line-height: 24px;
 }
 
+/* 🔹 تحسين الأيقونات */
+.fa-brands, .fa-solid, .fa-regular {
+    margin-right: 8px;
+    color: var(--white);
+}
+
+/* 🔹 تحسين الروابط */
+.contact a, .follow-me a {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* 🔹 تحسين التصميم على الهواتف */
 @media (max-width: 764px) {
     main {
         grid-template-columns: 1fr;
+    }
+
+    .background-overlay {
+        opacity: 0.1;
     }
 }
