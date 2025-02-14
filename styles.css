@@ -1,4 +1,3 @@
-/* 🔹 المتغيرات */
 :root {
     --primary-color: #0044cc;
     --secondary-color: #f4f4f4;
@@ -17,19 +16,70 @@ body {
     position: relative;
 }
 
-/* 🔹 الروابط */
-a {
+/* 🔹 صورة الغلاف الشفافة */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('assets/images.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* 🔹 الهيكل العام للصفحة الرئيسية */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 🔹 المنطقة اليسرى (الملف الشخصي) */
+.left-area {
+    background-color: var(--primary-color);
     color: var(--white);
-    text-decoration: none;
-    transition: 0.3s;
+    padding: 40px 30px;
 }
 
-a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+/* 🔹 صورة الملف الشخصي */
+.left-area img {
+    display: block;
+    max-width: 100%;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
 }
 
-/* 🔹 تحسين الخطوط */
+/* 🔹 تحسين العناوين */
+h1 {
+    font-size: 26px;
+    text-align: center;
+}
+
+/* 🔹 تنسيق العناوين في القسم الأيمن */
+.right-area h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* 🔹 تنسيق العناوين للأقسام */
+section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 تنسيق النصوص */
 p {
     font-size: 14px;
     line-height: 24px;
@@ -42,64 +92,56 @@ p {
 }
 
 /* 🔹 تحسين الروابط */
-.contact a, .follow-me a {
-    color: #ffcc00;
-    font-weight: bold;
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* 🔹 تحسين التصميم على الهواتف */
-@media (max-width: 764px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    .background-overlay {
-        opacity: 0.1;
-    }
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
-/* 🔹 صفحة المعرض */
+/* 🔹 تحسين الشبكة */
+.grid {
+    display: grid;
+    grid-template-columns: 200px 30px auto;
+    gap: 10px;
+}
+
+/* 🔹 تنسيق صفحة المعرض */
 .gallery-container {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px;
+    margin: 20px auto;
+    padding: 20px;
     text-align: center;
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 تحسين التصميم على الهواتف */
+/* زيادة حجم الصور بشكل مريح في الهواتف */
 @media (max-width: 768px) {
-    .gallery-container {
-        padding: 20px;
-    }
-
     .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .gallery img {
-        border-radius: 8px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
@@ -189,90 +231,15 @@ button:active {
 
 /* 🔹 تحسين التصميم على الهواتف */
 @media (max-width: 764px) {
-    form {
-        padding: 30px;
+    main {
+        grid-template-columns: 1fr;
     }
 
-    input[type="password"] {
-        font-size: 14px;
+    .background-overlay {
+        opacity: 0.1;
     }
 
-    button {
-        font-size: 14px;
+    .gallery-container {
+        padding: 10px;
     }
-}
-
-/* 🔹 تنسيق صفحة الملف الشخصي (Profile Page) */
-.background-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url('assets/images.jpg') no-repeat center center/cover;
-    opacity: 0.2;
-    z-index: -1;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    max-width: 1200px;
-    margin: 20px auto;
-    background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.left-area {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 40px 30px;
-}
-
-.left-area img {
-    display: block;
-    max-width: 100%;
-    width: 200px;
-    border-radius: 50%;
-    margin: 0 auto 30px;
-}
-
-.right-area h1 {
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.right-area {
-    padding: 40px;
-}
-
-/* 🔹 تحسين العناوين */
-h1 {
-    font-size: 26px;
-    text-align: center;
-}
-
-/* 🔹 تحسين الشبكة */
-.grid {
-    display: grid;
-    grid-template-columns: 200px 30px auto;
-    gap: 10px;
-}
-
-button {
-    padding: 12px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
 }
