@@ -1,41 +1,46 @@
+/* 🔹 إعداد الألوان والخطوط */
+:root {
+    --primary-color: #0044cc;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+    --gray-light: #dddddd;
+}
+
+/* 🔹 تنسيق عام */
 body {
     font-family: 'Rubik', sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
+/* 🔹 تنسيق الهيدر */
 header {
-    background: #0044cc;
-    color: white;
-    text-align: center;
+    background: var(--primary-color);
+    color: var(--white);
     padding: 20px;
+    text-align: center;
 }
 
-nav a {
-    color: white;
+header nav a {
+    color: var(--white);
     text-decoration: none;
     margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-nav a:hover {
+header nav a:hover {
     text-decoration: underline;
 }
 
-.left-area {
-    background: #0044cc;
-    color: white;
-    padding: 20px;
-    width: 300px;
-}
-
-.right-area {
-    padding: 20px;
-}
-
+/* 🔹 تنسيق معرض الصور */
 .gallery-container {
     max-width: 1200px;
     margin: 20px auto;
+    padding: 20px;
     text-align: center;
 }
 
@@ -43,29 +48,25 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: white;
-    color: #0044cc;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.btn:hover {
-    background: #ddd;
+/* 🔹 تحسين التصميم على الهواتف */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }
