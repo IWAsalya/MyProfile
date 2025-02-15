@@ -130,6 +130,29 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* 🔹 تحسين أزرار صفحة الصور */
+.gallery button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gallery button:hover {
+    background-color: #0033aa;
+    transform: translateY(-2px);
+}
+
+.gallery button:active {
+    transform: translateY(0);
+}
+
 /* 🔹 صفحة كلمة المرور */
 body.password-page {
     display: flex;
