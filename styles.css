@@ -8,6 +8,11 @@
     --button-active: #002288;
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-dark: rgba(0, 0, 0, 0.2);
+    --whatsapp-color: #25D366;
+    --facebook-color: #1877F2;
+    --twitter-color: #1DA1F2;
+    --instagram-color: #E4405F;
+    --linkedin-color: #0077B5;
 }
 
 /* 🔹 تنسيق عام */
@@ -111,19 +116,43 @@ button:active {
 }
 
 /* 🔹 تحسين أيقونات التواصل الاجتماعي */
-.fa-brands, .fa-solid, .fa-regular {
-    margin-right: 8px;
-    color: var(--white);
-    font-size: 20px;
-    padding: 10px;
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-    transition: background-color 0.3s, transform 0.2s;
+    color: var(--white);
+    font-size: 24px;
+    margin: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px var(--shadow-light);
 }
 
-.fa-brands:hover, .fa-solid:hover, .fa-regular:hover {
-    background-color: var(--button-hover);
+.social-icons a:hover {
     transform: scale(1.1);
+    box-shadow: 0px 6px 15px var(--shadow-dark);
+}
+
+.social-icons .whatsapp {
+    background-color: var(--whatsapp-color);
+}
+
+.social-icons .facebook {
+    background-color: var(--facebook-color);
+}
+
+.social-icons .twitter {
+    background-color: var(--twitter-color);
+}
+
+.social-icons .instagram {
+    background-color: var(--instagram-color);
+}
+
+.social-icons .linkedin {
+    background-color: var(--linkedin-color);
 }
 
 /* 🔹 تحسين التصميم على الهواتف */
