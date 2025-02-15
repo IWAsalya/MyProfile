@@ -142,6 +142,7 @@ a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
 }
 
 .gallery button:hover {
@@ -151,6 +152,31 @@ a:hover {
 
 .gallery button:active {
     transform: translateY(0);
+}
+
+/* 🔹 تحسين التصميم على الهواتف */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    .background-overlay {
+        opacity: 0.1;
+    }
+
+    .gallery-container {
+        padding: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery button {
+        width: 100%;
+        padding: 14px;
+    }
 }
 
 /* 🔹 صفحة كلمة المرور */
