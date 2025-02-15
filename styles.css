@@ -130,55 +130,81 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 تحسين التصميم على الهواتف */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    
-    .left-area {
-        padding: 20px;
-    }
-    
-    .left-area img {
-        width: 150px;
-    }
-    
-    .right-area h1 {
-        font-size: 28px;
-        padding: 15px;
-    }
-    
-    p {
-        font-size: 13px;
-    }
-    
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    
-    .background-overlay {
-        opacity: 0.2;
-    }
+/* 🔹 صفحة كلمة المرور */
+body.password-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* 🔹 صفحة تسجيل الدخول */
-@media (max-width: 480px) {
-    form {
-        max-width: 90%;
-        padding: 30px;
-    }
+header h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+}
 
-    header h1 {
-        font-size: 24px;
-    }
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
-    input[type="password"] {
-        font-size: 14px;
-    }
+label {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
 
-    button {
-        font-size: 14px;
-        padding: 10px;
-    }
+input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-light);
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0033aa;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#error-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: red;
+    text-align: center;
 }
