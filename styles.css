@@ -107,7 +107,7 @@ button {
 
 @media(button: hover) and (pointer: fine) {
     button:hover {
-        background-color: #0b5ed7;
+        background-color: #FF0000;
         border-color: #0a58ca;
     }
 }
