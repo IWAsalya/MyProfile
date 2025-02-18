@@ -3,6 +3,7 @@
     --secondary-color: #f4f4f4;
     --text-color: #333;
     --white: #ffffff;
+    --red: #FF0000;
     --gray-light: #dddddd;
     --button-hover: #0033aa;
     --button-active: #002288;
@@ -52,7 +53,7 @@ main {
 /* 🔹 المنطقة اليسرى (الملف الشخصي) */
 .left-area {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--red);
     padding: 40px 30px;
     text-align: center;
 }
