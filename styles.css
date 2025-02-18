@@ -52,8 +52,8 @@ main {
 
 /* 🔹 المنطقة اليسرى (الملف الشخصي) */
 .left-area {
-    background-color: var(--primary-color);
-    color: var(--red);
+    background-color: var(--red);
+    color: var(--primary-color);
     padding: 40px 30px;
     text-align: center;
 }
