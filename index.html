@@ -5,106 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>السيرة الذاتية - إبراهيم وافي عسلية</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        const cvData = {
-            ar: {
-                name: "إبراهيم وافي عسلية",
-                birth: "تاريخ الميلاد: 26 مارس 2000",
-                address: "العنوان: فزة، شمال غزة",
-                phone: "رقم الهاتف: 0597778030",
-                email: "البريد الإلكتروني: iasalya537@gmail.com",
-                profile: "طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...",
-                education: "التعليم:",
-                work: "الخبرات العملية:",
-                skills: "المهارات:",
-                languages: "اللغات:",
-                activities: "الأنشطة والرحلات الدولية:",
-                hobbies: "الهوايات:"
-            },
-            en: {
-                name: "Ibrahim Wafi Asalya",
-                birth: "Date of Birth: March 26, 2000",
-                address: "Address: Fazza, North Gaza",
-                phone: "Phone: 0597778030",
-                email: "Email: iasalya537@gmail.com",
-                profile: "A passionate Computer Engineering student with extensive academic and practical experience...",
-                education: "Education:",
-                work: "Work Experience:",
-                skills: "Skills:",
-                languages: "Languages:",
-                activities: "International Activities and Trips:",
-                hobbies: "Hobbies:"
-            }
-        };
-        
-        function changeLanguage(lang) {
-            document.getElementById('name').innerText = cvData[lang].name;
-            document.getElementById('birth').innerText = cvData[lang].birth;
-            document.getElementById('address').innerText = cvData[lang].address;
-            document.getElementById('phone').innerText = cvData[lang].phone;
-            document.getElementById('email').innerText = cvData[lang].email;
-            document.getElementById('profile').innerText = cvData[lang].profile;
-            document.getElementById('education').innerText = cvData[lang].education;
-            document.getElementById('work').innerText = cvData[lang].work;
-            document.getElementById('skills').innerText = cvData[lang].skills;
-            document.getElementById('languages').innerText = cvData[lang].languages;
-            document.getElementById('activities').innerText = cvData[lang].activities;
-            document.getElementById('hobbies').innerText = cvData[lang].hobbies;
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <div class="background-overlay"></div>
     <main>
-        <aside class="left-area">
-            <img src="assets/profile.jpg" alt="صورة شخصية">
-            <h2 id="name">إبراهيم وافي عسلية</h2>
-            <p id="birth">تاريخ الميلاد: 26 مارس 2000</p>
-            <p id="address">العنوان: فزة، شمال غزة</p>
-            <p id="phone">رقم الهاتف: 0597778030</p>
-            <p id="email">البريد الإلكتروني: iasalya537@gmail.com</p>
-            <div class="language-switch">
-                <button id="lang-btn" onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')">تغيير اللغة</button>
-                <button id="gallery-btn" onclick="window.location.href='gallery.html'">معرض الصور</button>
-            </div>
-        </aside>
-        <section class="right-area">
-            <h1>السيرة الذاتية</h1>
-            <h3>الملف الشخصي</h3>
-            <p id="profile">طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
-            <h3 id="education">التعليم:</h3>
+        <!-- المنطقة اليسرى -->
+        <div class="left-area">
+            <img src="assets/profile.jpg" alt="Profile Picture"/>
+            <h1>إبراهيم وافي عسلية</h1>
+            <p>مهندس شبكات</p>
+            
+            <!-- قسم الاتصال -->
+            <section class="contact">
+                <h2>معلومات الاتصال</h2>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/972597778030" target="_blank">+972 59 777 8030</a></p>
+                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
+                <p><i class="fa-solid fa-globe"></i> <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">TechPulse-Gaza</a></p>
+            </section>
+
+            <!-- روابط التواصل الاجتماعي -->
+            <section class="social-icons">
+                <h2>تابعني</h2>
+                <a href="https://facebook.com/IbrahimWAsalya" class="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://t.me/IWA_2000" class="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </section>
+        </div>
+
+        <!-- المنطقة اليمنى -->
+        <div class="right-area">
+            <h1>إبراهيم وافي عسلية</h1>
+            <h2>نبذة عني</h2>
+            <p>طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
+            
+            <h2>التعليم</h2>
             <ul>
                 <li>الجامعة الإسلامية بغزة – هندسة الحاسوب (2019)</li>
                 <li>جامعة النجاح الوطنية – تبادل طلابي علمي (2023)</li>
             </ul>
-            <h3 id="work">الخبرات العملية:</h3>
+            
+            <h2>الخبرات العملية</h2>
             <ul>
                 <li>العمل في شركة الحاج نمر التميمي في مجال هندسة الحاسوب.</li>
                 <li>العمل مع مركز التدريب المهني في نابلس.</li>
             </ul>
-            <h3 id="skills">المهارات:</h3>
+            
+            <h2>المهارات</h2>
             <ul>
                 <li>هندسة الحاسوب، البرمجة، إدارة الشبكات.</li>
                 <li>السباحة، كرة القدم، ركوب الخيل.</li>
             </ul>
-            <h3 id="languages">اللغات:</h3>
+            
+            <h2>اللغات</h2>
             <ul>
                 <li>العربية: ممتاز</li>
                 <li>الإنجليزية: جيد جدًا</li>
                 <li>العبرية: جيد</li>
             </ul>
-            <h3 id="activities">الأنشطة والرحلات الدولية:</h3>
-            <ul>
-                <li>تركيا (2010، 2013)</li>
-                <li>مصر (2019)</li>
-                <li>المسجد الأقصى (2021)</li>
-            </ul>
-            <h3 id="hobbies">الهوايات:</h3>
-            <ul>
-                <li>تطوير البرمجيات</li>
-                <li>السفر</li>
-            </ul>
-        </section>
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
