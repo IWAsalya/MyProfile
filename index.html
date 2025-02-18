@@ -4,71 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>السيرة الذاتية - إبراهيم وافي عسلية</title>
-    <link rel="stylesheet" href="styles.css"> <!-- التأكد من وجود ملف CSS -->
+    <link rel="stylesheet" href="styles.css">
     <script>
         const cvData = {
             ar: {
                 name: "إبراهيم وافي عسلية",
+                birth: "تاريخ الميلاد: 26 مارس 2000",
+                address: "العنوان: فزة، شمال غزة",
+                phone: "رقم الهاتف: 0597778030",
+                email: "البريد الإلكتروني: iasalya537@gmail.com",
                 profile: "طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...",
-                education: "التعليم",
-                work: "الخبرات العملية",
-                skills: "المهارات",
-                languages: "اللغات",
-                gallery: "معرض الصور",
-                switchLang: "English"
+                education: "التعليم:",
+                work: "الخبرات العملية:",
+                skills: "المهارات:",
+                languages: "اللغات:",
+                activities: "الأنشطة والرحلات الدولية:",
+                hobbies: "الهوايات:"
             },
             en: {
                 name: "Ibrahim Wafi Asalya",
+                birth: "Date of Birth: March 26, 2000",
+                address: "Address: Fazza, North Gaza",
+                phone: "Phone: 0597778030",
+                email: "Email: iasalya537@gmail.com",
                 profile: "A passionate Computer Engineering student with extensive academic and practical experience...",
-                education: "Education",
-                work: "Work Experience",
-                skills: "Skills",
-                languages: "Languages",
-                gallery: "Photo Gallery",
-                switchLang: "العربية"
+                education: "Education:",
+                work: "Work Experience:",
+                skills: "Skills:",
+                languages: "Languages:",
+                activities: "International Activities and Trips:",
+                hobbies: "Hobbies:"
             }
         };
         
         function changeLanguage(lang) {
             document.getElementById('name').innerText = cvData[lang].name;
+            document.getElementById('birth').innerText = cvData[lang].birth;
+            document.getElementById('address').innerText = cvData[lang].address;
+            document.getElementById('phone').innerText = cvData[lang].phone;
+            document.getElementById('email').innerText = cvData[lang].email;
             document.getElementById('profile').innerText = cvData[lang].profile;
             document.getElementById('education').innerText = cvData[lang].education;
             document.getElementById('work').innerText = cvData[lang].work;
             document.getElementById('skills').innerText = cvData[lang].skills;
             document.getElementById('languages').innerText = cvData[lang].languages;
-            document.getElementById('gallery-btn').innerText = cvData[lang].gallery;
-            document.getElementById('lang-btn').innerText = cvData[lang].switchLang;
+            document.getElementById('activities').innerText = cvData[lang].activities;
+            document.getElementById('hobbies').innerText = cvData[lang].hobbies;
         }
     </script>
 </head>
 <body>
     <div class="container">
         <div class="language-switch">
-            <button id="lang-btn" onclick="changeLanguage('en')">English</button>
+            <button id="lang-btn" onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')">تغيير اللغة</button>
+            <button id="gallery-btn" onclick="window.location.href='gallery.html'">معرض الصور</button>
         </div>
-        <div class="left-area">
-            <h1 id="name">إبراهيم وافي عسلية</h1>
-            <p id="profile">طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
-            <button id="gallery-btn" onclick="location.href='gallery.html'">معرض الصور</button>
-        </div>
-        <div class="right-area">
-            <section>
-                <h2 id="education">التعليم</h2>
-                <p>الجامعة الإسلامية بغزة – هندسة الحاسوب (2019)</p>
-            </section>
-            <section>
-                <h2 id="work">الخبرات العملية</h2>
-                <p>العمل في شركة الحاج نمر التميمي في مجال هندسة الحاسوب.</p>
-            </section>
-            <section>
-                <h2 id="skills">المهارات</h2>
-                <p>هندسة الحاسوب، البرمجة، إدارة الشبكات.</p>
-            </section>
-            <section>
-                <h2 id="languages">اللغات</h2>
-                <p>العربية: ممتاز، الإنجليزية: جيد جدًا، العبرية: جيد</p>
-            </section>
-        </div>
+        
+        <h2 id="name">إبراهيم وافي عسلية</h2>
+        <p id="birth">تاريخ الميلاد: 26 مارس 2000</p>
+        <p id="address">العنوان: فزة، شمال غزة</p>
+        <p id="phone">رقم الهاتف: 0597778030</p>
+        <p id="email">البريد الإلكتروني: iasalya537@gmail.com</p>
+        <h3>الملف الشخصي</h3>
+        <p id="profile">طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
+        
+        <h3 id="education">التعليم:</h3>
+        <ul>
+            <li>الجامعة الإسلامية بغزة – هندسة الحاسوب (2019)</li>
+            <li>جامعة النجاح الوطنية – تبادل طلابي علمي (2023)</li>
+        </ul>
+        
+        <h3 id="work">الخبرات العملية:</h3>
+        <ul>
+            <li>العمل في شركة الحاج نمر التميمي في مجال هندسة الحاسوب.</li>
+            <li>العمل مع مركز التدريب المهني في نابلس.</li>
+        </ul>
+        
+        <h3 id="skills">المهارات:</h3>
+        <ul>
+            <li>هندسة الحاسوب، البرمجة، إدارة الشبكات.</li>
+            <li>السباحة، كرة القدم، ركوب الخيل.</li>
+        </ul>
+        
+        <h3 id="languages">اللغات:</h3>
+        <ul>
+            <li>العربية: ممتاز</li>
+            <li>الإنجليزية: جيد جدًا</li>
+            <li>العبرية: جيد</li>
+        </ul>
+        
+        <h3 id="activities">الأنشطة والرحلات الدولية:</h3>
+        <ul>
+            <li>تركيا (2010، 2013)</li>
+            <li>مصر (2019)</li>
+            <li>المسجد الأقصى (2021)</li>
+        </ul>
+        
+        <h3 id="hobbies">الهوايات:</h3>
+        <ul>
+            <li>تطوير البرمجيات</li>
+            <li>السفر</li>
+        </ul>
     </div>
 </body>
 </html>
