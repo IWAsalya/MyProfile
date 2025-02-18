@@ -4,70 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>السيرة الذاتية - إبراهيم وافي عسلية</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- التأكد من وجود ملف CSS -->
+    <script>
+        const cvData = {
+            ar: {
+                name: "إبراهيم وافي عسلية",
+                profile: "طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...",
+                education: "التعليم",
+                work: "الخبرات العملية",
+                skills: "المهارات",
+                languages: "اللغات",
+                gallery: "معرض الصور",
+                switchLang: "English"
+            },
+            en: {
+                name: "Ibrahim Wafi Asalya",
+                profile: "A passionate Computer Engineering student with extensive academic and practical experience...",
+                education: "Education",
+                work: "Work Experience",
+                skills: "Skills",
+                languages: "Languages",
+                gallery: "Photo Gallery",
+                switchLang: "العربية"
+            }
+        };
+        
+        function changeLanguage(lang) {
+            document.getElementById('name').innerText = cvData[lang].name;
+            document.getElementById('profile').innerText = cvData[lang].profile;
+            document.getElementById('education').innerText = cvData[lang].education;
+            document.getElementById('work').innerText = cvData[lang].work;
+            document.getElementById('skills').innerText = cvData[lang].skills;
+            document.getElementById('languages').innerText = cvData[lang].languages;
+            document.getElementById('gallery-btn').innerText = cvData[lang].gallery;
+            document.getElementById('lang-btn').innerText = cvData[lang].switchLang;
+        }
+    </script>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <main>
-        <!-- المنطقة اليسرى -->
+    <div class="container">
+        <div class="language-switch">
+            <button id="lang-btn" onclick="changeLanguage('en')">English</button>
+        </div>
         <div class="left-area">
-            <img src="assets/profile.jpg" alt="Profile Picture"/>
-            <h1>إبراهيم وافي عسلية</h1>
-            <p>مهندس شبكات</p>
-            
-            <!-- قسم الاتصال -->
-            <section class="contact">
-                <h2>معلومات الاتصال</h2>
-                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/972597778030" target="_blank">+972 59 777 8030</a></p>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
-                <p><i class="fa-solid fa-globe"></i> <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">TechPulse-Gaza</a></p>
-            </section>
-
-            <!-- روابط التواصل الاجتماعي -->
-            <section class="social-icons">
-                <h2>تابعني</h2>
-                <a href="https://facebook.com/IbrahimWAsalya" class="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://t.me/IWA_2000" class="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-            </section>
+            <h1 id="name">إبراهيم وافي عسلية</h1>
+            <p id="profile">طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
+            <button id="gallery-btn" onclick="location.href='gallery.html'">معرض الصور</button>
         </div>
-
-        <!-- المنطقة اليمنى -->
         <div class="right-area">
-            <h1>إبراهيم وافي عسلية</h1>
-            <h2>نبذة عني</h2>
-            <p>طالب هندسة حاسوب طموح يتمتع بخبرات أكاديمية وعملية واسعة، شغوف بالتكنولوجيا والبرمجة...</p>
-            
-            <h2>التعليم</h2>
-            <ul>
-                <li>الجامعة الإسلامية بغزة – هندسة الحاسوب (2019)</li>
-                <li>جامعة النجاح الوطنية – تبادل طلابي علمي (2023)</li>
-            </ul>
-            
-            <h2>الخبرات العملية</h2>
-            <ul>
-                <li>العمل في شركة الحاج نمر التميمي في مجال هندسة الحاسوب.</li>
-                <li>العمل مع مركز التدريب المهني في نابلس.</li>
-            </ul>
-            
-            <h2>المهارات</h2>
-            <ul>
-                <li>هندسة الحاسوب، البرمجة، إدارة الشبكات.</li>
-                <li>السباحة، كرة القدم، ركوب الخيل.</li>
-            </ul>
-            
-            <h2>اللغات</h2>
-            <ul>
-                <li>العربية: ممتاز</li>
-                <li>الإنجليزية: جيد جدًا</li>
-                <li>العبرية: جيد</li>
-            </ul>
+            <section>
+                <h2 id="education">التعليم</h2>
+                <p>الجامعة الإسلامية بغزة – هندسة الحاسوب (2019)</p>
+            </section>
+            <section>
+                <h2 id="work">الخبرات العملية</h2>
+                <p>العمل في شركة الحاج نمر التميمي في مجال هندسة الحاسوب.</p>
+            </section>
+            <section>
+                <h2 id="skills">المهارات</h2>
+                <p>هندسة الحاسوب، البرمجة، إدارة الشبكات.</p>
+            </section>
+            <section>
+                <h2 id="languages">اللغات</h2>
+                <p>العربية: ممتاز، الإنجليزية: جيد جدًا، العبرية: جيد</p>
+            </section>
         </div>
-    </main>
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
