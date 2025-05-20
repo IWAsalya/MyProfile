@@ -1,107 +1,163 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السيرة الذاتية - إبراهيم وافي عسلية</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>السيرة الذاتية - إبراهيم وافي عسلية</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <main>
-        <!-- المنطقة اليسرى -->
-        <div class="left-area">
-            <img src="assets/profile.jpg" alt="Profile Picture"/>
-            <h1 data-lang-ar="إبراهيم وافي عسلية" data-lang-en="Ibrahim Wafi Asalya"></h1>
-            <p data-lang-ar="مهندس شبكات" data-lang-en="Network Engineer"></p>
-            
-            <!-- قسم الاتصال -->
-            <section class="contact">
-                <h2 data-lang-ar="معلومات الاتصال" data-lang-en="Contact Information"></h2>
-                <p><i class="fa-brands fa-whatsapp"></i> <button> <a href="https://wa.me/972597778030" target="_blank">+972 59 777 8030</a></button></p>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a></p>
-                <p><i class="fa-solid fa-globe"></i> <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">TechPulse-Gaza</a></p>
-            </section>
+  <div class="background-overlay"></div>
+  <main>
+    <!-- المنطقة اليسرى -->
+    <div class="left-area">
+      <img src="assets/profile.jpg" alt="صورة شخصية" />
+      <h1>إبراهيم وافي عسلية</h1>
+      <p data-lang-ar="مهندس شبكات" data-lang-en="Network Engineer">مهندس شبكات</p>
 
-            <!-- روابط التواصل الاجتماعي -->
-            <section class="social-icons">
-                <h2>تابعني</h2>
-                <a href="https://facebook.com/IbrahimWAsalya" class="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://t.me/IWA_2000" class="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-            </section>
-            
-            <section class="language-switch">
-                <button id="lang-btn" onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')">تغيير اللغة</button>
-                <button id="gallery-btn" onclick="window.location.href='https://iwasalya.github.io/MyProfile/password.html'">معرض الصور</button>
-            </section>    
-            
+      <section class="contact">
+        <div class="contact-item whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/972597778030" target="_blank">+972 59 777 8030</a>
         </div>
-       
+        <div class="contact-item email">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:iasalya537@gmail.com">iasalya537@gmail.com</a>
+        </div>
+        <div class="contact-item website">
+          <i class="fa-solid fa-globe"></i>
+          <a href="https://iwasalya.github.io/TechPulse-Gaza/" target="_blank">TechPulse-Gaza</a>
+        </div>
+      </section>
+      
 
-        <!-- المنطقة اليمنى -->
-        <div class="right-area">
-            <h1>إبراهيم وافي عسلية</h1>
-            <h2>👤 نبذة شخصية </h2>
-              <p> مهندس حاسوب طموح ومتخصص في بيئات الشبكات والأنظمة، أتممت دراستي الأكاديمية والميدانية بجدارة، وأسعى إلى تطبيق المهارات التقنية والإدارية التي اكتسبتها في بيئة عمل احترافية. أمتلك شخصية قيادية، وأتميز بالعمل بروح الفريق، والقدرة على التعامل مع التحديات بمرونة وذكاء، إلى جانب التوازن الروحي والعلمي في حياتي.</p>
-            
-            <h2>🎓 التعليم </h2>
-            <ul>
-                <li> بكالوريوس هندسة الحاسوب – الجامعة الإسلامية – غزة (2025) </li>
-                <li> برنامج تبادل طلابي في هندسة الحاسوب – جامعة النجاح الوطنية – نابلس (2023) </li>
-            </ul>
-            
-            <h2>🛠 الخبرات العملية </h2>
-            <ul>
-                <li>متدرب – شركة الحاج نمر التميمي (مجال هندسة الحاسوب) </li>
-                <li> متدرب – مركز التدريب المهني، بالتعاون مع وزارة العمل – نابلس </li>
-            </ul>
-            <h2>🎯 الدورات والشهادات </h2>
-            <ul>
-                <li> دورة CCNA – الشبكات </li>
-                <li> دورة CEH – الهاكر الأخلاقي المعتمد </li>
-                <li>عدة دورات في القيادة والمهارات الإدارية </li>
-                <li>ورشات تدريبية متعددة في مجال الحاسوب وتكنولوجيا المعلومات </li>
-            </ul>
-            <h2>🧠 المهارات التقنية </h2>
-            <ul>
-                <li>Windows (بمستوى تخصصي)، Kali Linux (بمستوى متقدم) </li>
-                <li> Java، HTML، CSS، JavaScript </li>
-                <li> الأمن السيبراني: تحليل الثغرات، الحماية، استخدام أدوات اختبار الاختراق </li>
-                <li>  SQL: قواعد البيانات : إنشاء وإدارة واستعلام البيانات بكفاءة </li>
-                <li> Cisco تصميم وإدارة الشبكات باستخدام أدوات </li>
-                <li> MikroTik القدرة الممتازة على التعامل مع أجهزة وبرمجيات </li>
-            </ul>
-            
-            <h2>🏆 الهوايات والأنشطة </h2>
-            <ul>
-                <li>لاعب كرة قدم سابق في نادي السلام الرياضي – شمال غزة </li>
-                <li> فارس قفز حواجز وعضو في نادي الفروسية في غزة</li>
-                <li> سباح محترف ويتمتع بلياقة بدنية عالية وروح رياضية </li>
-            </ul>
-            
-            <h2>🕌 الاهتمامات الشرعية والدينية </h2>
-            <ul>
-                <li>حاصل على عدة دورات في الفقه والعقيدة الإسلامية </li>
-                <li>مستوى متقدم في أحكام التلاوة والتجويد</li>
-                <li>تأمل وتدبر للقرآن الكريم، وأسعى للحصول على سند متصل بالنبي صلى الله عليه وسلم </li>
-            </ul>
-            <h2>🚘 رخص القيادة</h2>
-            <ul>
-                <li> (C1) رخصة قيادة فئة (مركبات متوسطة) </li>
-            </ul>
-            <h2>اللغات</h2>
-            <ul>
-                <li>العربية: ممتاز</li>
-                <li>الإنجليزية: جيد جدًا</li>
-                <li>العبرية: جيد</li>
-            </ul>
+      <section class="social-icons">
+        <a href="https://facebook.com/IbrahimWAsalya" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://t.me/IWA_2000" class="telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+      </section>
+      
+
+      <div class="language-switch">
+        <button id="lang-btn" onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')">change Language</button>
+        <button onclick="window.location.href='https://iwasalya.github.io/MyProfile/password.html'">معرض الصور</button>
+      </div>
+    </div>
+
+    <!-- المنطقة اليمنى -->
+    <div class="right-area">
+      <h1>إبراهيم وافي عسلية</h1>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="👤 نبذة شخصية" data-lang-en="👤 Personal Summary">👤 نبذة شخصية</h2>
+        <div class="section-content">
+          <p>   مهندس حاسوب طموح ومتخصص في بيئات الشبكات والأنظمة، أتممت دراستي الأكاديمية والميدانية بجدارة، وأسعى إلى تطبيق المهارات التقنية والإدارية التي اكتسبتها في بيئة عمل احترافية. أمتلك شخصية قيادية، وأتميز بالعمل بروح الفريق، والقدرة على التعامل مع التحديات بمرونة وذكاء، إلى جانب التوازن الروحي والعلمي في حياتي.</p>
         </div>
-    </main>
-    <script src="script.js"></script>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🎓 التعليم" data-lang-en="🎓 Education">🎓 التعليم</h2>
+        <div class="section-content">
+          <ul>
+            <li>بكالوريوس هندسة الحاسوب – الجامعة الإسلامية – غزة (2025)</li>
+            <li>برنامج تبادل طلابي في هندسة الحاسوب – جامعة النجاح الوطنية – نابلس (2023) </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🛠 الخبرات العملية" data-lang-en="🛠 Experience">🛠 الخبرات العملية</h2>
+        <div class="section-content">
+          <ul>
+            <li>متدرب – شركة الحاج نمر التميمي (مجال هندسة الحاسوب)</li>
+            <li> متدرب – مركز التدريب المهني، بالتعاون مع وزارة العمل – نابلس</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)">💻 مشروع التخرج</h2>
+        <div class="section-content graduation-project">
+          <h3>Gaza Health Center (GHC)</h3>
+          <p>
+            مشروع تخرج عبارة عن نظام صحي إلكتروني يهدف إلى تسهيل الوصول للخدمات الطبية في قطاع غزة. يحتوي الموقع على واجهات للمرضى، الأطباء، والإدارة مع نظام حجز مواعيد إلكتروني وسجل طبي رقمي.
+          </p>
+          <ul>
+            <li>تسجيل دخول متقدم للمرضى والأطباء</li>
+            <li>إدارة المواعيد والفحوصات بسهولة</li>
+            <li>تقارير طبية رقمية آمنة ومحمية</li>
+            <li>واجهة استخدام سهلة وسريعة الاستجابة</li>
+          </ul>
+          <a class="project-btn" href="https://github.com/IWAstalya/gaza-health-center" target="_blank">
+            <i class="fa-brands fa-github"></i> معاينة المشروع
+          </a>
+        </div>
+      </div>
+      
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🧠 المهارات التقنية" data-lang-en="🧠 Skills">🧠 المهارات التقنية</h2>
+        <div class="section-content">
+          <ul>
+           
+            <li>Windows (بمستوى تخصصي)، Kali Linux (بمستوى متقدم) </li>
+            <li> Java، HTML، CSS، JavaScript </li>
+            <li> الأمن السيبراني: تحليل الثغرات، الحماية، استخدام أدوات اختبار الاختراق </li>
+            <li>  SQL: قواعد البيانات : إنشاء وإدارة واستعلام البيانات بكفاءة </li>
+            <li> Cisco تصميم وإدارة الشبكات باستخدام أدوات </li>
+            <li> MikroTik القدرة الممتازة على التعامل مع أجهزة وبرمجيات </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🏆 الهوايات والأنشطة" data-lang-en="🏆 Hobbies">🏆 الهوايات والأنشطة</h2>
+        <div class="section-content">
+          <ul>
+               <li>لاعب كرة قدم سابق في نادي السلام الرياضي – شمال غزة </li>
+               <li> فارس قفز حواجز وعضو في نادي الفروسية في غزة</li>
+               <li> سباح محترف ويتمتع بلياقة بدنية عالية وروح رياضية </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🕌 الاهتمامات الدينية" data-lang-en="🕌 Religious Interests">🕌 الاهتمامات الدينية</h2>
+        <div class="section-content">
+          <ul>
+            
+            <li>حاصل على عدة دورات في الفقه والعقيدة الإسلامية </li>
+            <li>مستوى متقدم في أحكام التلاوة والتجويد</li>
+            <li>تأمل وتدبر للقرآن الكريم، وأسعى للحصول على سند متصل بالنبي صلى الله عليه وسلم </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🚘 رخص القيادة" data-lang-en="🚘 Driving License">🚘 رخص القيادة</h2>
+        <div class="section-content">
+          <ul>
+            <li> (C1) رخصة قيادة فئة (مركبات متوسطة) </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="section">
+        <h2 onclick="toggleSection(this)" data-lang-ar="🌐 اللغات" data-lang-en="🌐 Languages">🌐 اللغات</h2>
+        <div class="section-content">
+          <ul>
+            <li>العربية: ممتاز</li>
+            <li>الإنجليزية: جيد جدًا</li>
+            <li>العبرية: جيد</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
