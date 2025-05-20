@@ -1,24 +1,18 @@
-function changeLanguage(lang) {
-    // تغيير لغة الصفحة بتغيير السمة "lang" في عنصر <html>
+function toggleSection(header) {
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  }
+  
+  function changeLanguage(lang) {
     document.documentElement.lang = lang;
-
-    // تغيير نصوص جميع العناصر حسب اللغة
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  
     const elements = document.querySelectorAll('[data-lang-ar], [data-lang-en]');
-    
-    elements.forEach(function(element) {
-        // تغيير النص بناءً على اللغة
-        if (lang === 'ar') {
-            element.textContent = element.getAttribute('data-lang-ar');
-        } else {
-            element.textContent = element.getAttribute('data-lang-en');
-        }
+    elements.forEach(element => {
+      element.textContent = lang === 'ar' ? element.getAttribute('data-lang-ar') : element.getAttribute('data-lang-en');
     });
-
-    // تغيير نص الزر
+  
     const langBtn = document.getElementById('lang-btn');
-    if (lang === 'ar') {
-        langBtn.textContent = 'تغيير اللغة';
-    } else {
-        langBtn.textContent = 'Change Language';
-    }
-}
+    langBtn.textContent = lang === 'ar' ? 'Change Language' : 'تغيير اللغة';
+  }
+  
